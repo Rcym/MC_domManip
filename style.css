@@ -1,0 +1,387 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+:root {
+    --background: #364357;
+    --background_darker : #262f3d;
+    
+    --accent_1 : #246983;
+    --accent_2 : #00939C;
+    --accent_3 : #2FBB9A;
+
+    --lighter_2 : rgba(0, 147, 156, 0.6);
+    --lighter_3 : rgba(47, 187, 154, 0.6);
+
+}
+
+body {
+    margin: 0px;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background);
+}
+
+
+
+.leftPart {
+    position: relative;
+    width: 300px;
+    max-height: 1000%;
+    background-color: var(--background_darker);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: -400px;
+    width: 0px;
+    transition: all 0.2s ease;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent_1);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent_2);
+}
+
+
+
+
+
+
+.favListVisible {
+    width: 300px;
+    left: 0px;
+    transition: left 0.2s ease-in-out;
+}
+
+.leftPart h3 {
+    margin: 30px 0px;
+}
+
+
+
+.favElement {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.03);
+    margin: 0px 10px 10px 10px;
+    border-radius: 10px;
+    width: calc(100% - 20px);
+}
+
+.favElement:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* .favElement .actualQuote {
+    font-size: 16px;
+}
+
+.favElement .author {
+    width: fit-content;
+    margin: 10px 0px 10px auto;
+    color: rgba(255, 255, 255, 0.3);
+} */
+
+
+
+
+
+
+
+
+.mainPart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.container p {
+    width: fit-content;
+}
+
+/* .actualQuote {
+    margin-top: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+}
+
+.actualQuote::before {
+    content: '“';
+    margin: 5px;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.actualQuote::after {
+    content: '”';
+    margin: 5px;
+    color: rgba(255, 255, 255, 0.4);
+} */
+
+.mainPart .realQuote {
+    font-size: 24px;
+    max-width: 340px;
+}
+.mainPart .leftG {
+    margin-top: 20px;
+}
+
+.favBtn {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--accent_1);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.favBtn:hover {
+    transform: scale(1.3);
+}
+
+.favIcon {
+    inset: 12px;
+    /* transform: scale(0); */
+    /* animation: popingFav 0.5s ease-in-out 1; */
+}
+
+
+
+/* .fullStarIcon {
+    transform: scale(0);
+}
+.emptyStarIcon {
+    transform: scale(1);
+}
+
+.shownFavIcon .fullStarIcon {
+    transform: scale(1) !important;
+}
+.shownFavIcon .emptyStarIcon {
+    transform: scale(0) !important;
+} */
+.fullStarIcon {
+    opacity: 0;
+}
+.emptyStarIcon {
+    opacity: 1;
+}
+
+.shownFavIcon .fullStarIcon {
+    opacity: 1 !important;
+}
+.shownFavIcon .emptyStarIcon {
+    opacity: 0 !important;
+}
+
+.shownFavIcon {
+    background-color: var(--accent_2) !important;
+}
+
+
+
+
+@keyframes popingFav {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+
+
+
+.authorDiv {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.authorDiv p:first-child {
+    margin: 15px 20px;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.author {
+    color: rgba(255, 255, 255, 0.6);
+    align-self: flex-end;
+    margin: 15px 20px;
+}
+
+
+
+
+
+
+
+
+.btnDiv {
+    margin-top: 20px;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.generateNewBtn {
+    background-color: var(--accent_2);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.generateNewBtn:hover {
+    box-shadow: 0px 0px 30px var(--lighter_2);
+}
+
+.listBtn {
+    position: relative;
+    border: 1px solid var(--accent_2);
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+    color: var(--accent_3);
+    transition: all 0.2s ease;
+}
+
+.listBtn:hover {
+    background-color: var(--accent_2);
+    color: white;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+}
+
+
+
+
+
+
+
+
+
+.quoteDiv {
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: center;
+    width: calc(100% - 20px);
+    margin: auto;
+}
+
+.guillemets {
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0px;
+}
+
+.leftG {
+    align-self: flex-start;
+    margin-right: 10px;
+}
+
+.rightG {
+    align-self: flex-end;
+    margin-left: 10px;
+}
+
+.realQuote {
+    max-width: 220px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.favElement .author {
+    width: fit-content;
+    margin: 0px 15px 10px auto;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 14px;
+}
+
+
+.hideFavBtn {
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    transform: scaleY(2);
+    background-color: var(--background_darker);
+    position: absolute;
+    right: -20px;
+    top: 300px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+img {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    filter: invert(1);
+}
+
+.favMenuIcon {
+    inset: 3px;
+    transform: scale(0.8);
+}
+
+
+
+.deleteFromFavBtn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 10px;
+    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 10px;
+}
+
+.deleteFromFavBtn:hover {
+    background-color: var(--accent_2);
+}

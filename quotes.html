@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="quotes.js" defer></script>
+    <title>Quotes generator</title>
+</head>
+<body>
+
+    <div class="leftPart">
+        <h3>Favorites Quotes</h3>
+
+
+        <button class="hideFavBtn"><</button>
+        
+    </div>
+
+    <div class="mainPart">
+        <h3>Quotes generator</h3>
+        <div class="container">
+            <div class="quoteDiv">
+                <p class="guillemets leftG">“</p>
+                <p id="mainDisplayQuote" class="realQuote">if you know you know, and if you dont know you dont know</p>
+                <p class="guillemets rightG">”</p>
+            </div>
+            <div class="authorDiv">
+                <p>Author</p>
+                <p id="mainDisplayAuthor" class="author">author gfdgrdhfhtr</p>
+            </div>
+            <button class="favBtn">
+                <img class="favIcon emptyStarIcon" src="assets/starEmpty.png" alt="">
+                <img class="favIcon fullStarIcon" src="assets/starFull.png" alt="">
+            </button>
+        </div>
+        <div class="btnDiv">
+            <button class="generateNewBtn">Generate</button>
+            <button class="listBtn"><img class="favMenuIcon" src="assets/hamburger.png" alt="List"></button>
+        </div>
+    </div>
+    
+</body>
+</html>
